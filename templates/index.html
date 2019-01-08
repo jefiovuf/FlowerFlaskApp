@@ -1,0 +1,24 @@
+<html> 
+
+<head>
+<title>FlowerApp</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+  *{
+    padding:30dp;
+  }
+</style>
+<body>
+    <img src="http://s3.amazonaws.com/hydroflask/media/media-library-files/logos/2017/hydro-flask/jpg/Hydro-Flask-Logo-Secondary-Lockup-Black-158x89.jpg"><br />
+    <h2>Make Flower Predictions</h2>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" value="Upload">
+      <input type="submit" value="Predict"> {% if label %} {{ label }} {% endif %}
+    </form>
+
+</body>
+
+</html>
